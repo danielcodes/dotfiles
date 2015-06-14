@@ -10,4 +10,5 @@ set t_Co=256 "needed for some color schemes
 "adding a colorscheme
 colorscheme badwolf
 
-
+"Unix as the standard file type
+set ffs=unix,dos,mac
