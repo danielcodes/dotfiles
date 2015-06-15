@@ -1,0 +1,31 @@
+LEARNING VIM COMMANDS
+WRITING IT OUT TO LEARN BETTER
+
+LESSON 1
+- insert puts the text before the selected character
+- x, to delete the selected character
+- A, to append to end of the line
+
+LESSON 2
+- dw, at the beginning of the word to delete it
+--fix, d should appear on screen, there must be some sort of status bar
+- d$, deletes the rest of the line
+--Operator and Motion, d + something, w, e and $ (test them out)
+- movement in a line, w to go beginning of next word, e end of word, and b for back of word
+- n number to repeat the motion, ex. 3w, d3w
+- dd, to delete a whole line
+- u, to undo, U, to undo a whole line
+
+LESSON 3
+- dd, places deleted text on a register, p pastes that text after the cursor
+- r, replaces current character by the next one entered
+- ce, to delete the rest of the word and place the correct one
+- c + e and w seem to work the same, c$ to fix line
+
+LESSON 4, do /Lesson 4.1 to resume
+
+
+
+COMMANDS THAT MAY BE USEFUL LATER ON
+- getting to the beginning (0) and end of line (A)
+-
