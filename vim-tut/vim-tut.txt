@@ -23,9 +23,28 @@ LESSON 3
 - c + e and w seem to work the same, c$ to fix line
 
 LESSON 4, do /Lesson 4.1 to resume
+- ctrl+g, shows location in file and status
+- G bottom, gg start. number + G, brings you to line number
+- /keyword, to search. n to repeat search. N to seach in the opposite dir
+- %, place cursor on top of a bracket, will finding matching bracket
+- :s/old/new/g, to substitute old occurences for new, on selected line
+- :%s, for all the occurences on a file
+
+LESSON 5, resume at /Lesson 5.2
+- : operator, allows for execution of commands, :! gives us access to external shell commands, :!ls
+ 
+
+
+
+
+
 
 
 
 COMMANDS THAT MAY BE USEFUL LATER ON
 - getting to the beginning (0) and end of line (A)
--
+- search with /keyword
+
+SO THAT i DON'T HAVE TO ENTER MY PASSPHARE EVERY DARN TIME
+- eval $(ssh-agent)
+- ssh-add 
