@@ -1,4 +1,3 @@
-LEARNING VIM COMMANDS
 WRITING IT OUT TO LEARN BETTER
 
 LESSON 1
@@ -44,11 +43,10 @@ LESSON 6
 - ignore case search, set ic. highlight as well through hls, and for partial do is. For one search only do /keyword\c
 
 LESSON 7
-- 
-
-
-
-
+- :help command, to read documentation. ctrl+Wx2 to switch between windows
+- vimrc:q file to set configuration, :help vimrc-intro for a briedf introduction
+- autocompletion using tab (get used to this for less typing)
+- ctrl+w, with help is basically tmux so reseach further 
 
 COMMANDS THAT MAY BE USEFUL LATER ON
 - getting to the beginning (0) and end of line (A)
