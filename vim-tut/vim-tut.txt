@@ -32,10 +32,19 @@ LESSON 4, do /Lesson 4.1 to resume
 
 LESSON 5, resume at /Lesson 5.2
 - : operator, allows for execution of commands, :! gives us access to external shell commands, :!ls
- 
+- :w filename, makes a copy of the current file into a new namefile
+- v, creates a starting point, moving the cursor will create highlighted text. selected text can be saved through :w filename
+- :r, allows appending can come from a file, or output from a command !ls
 
+LESSON 6
+- o, creates new line. O, new live above the cursor
+- a, appends text next to the cursor
+- R, like insert mode, but overwrites current characters
+- select text using visual mode. press y to copy and use p to paste
+- ignore case search, set ic. highlight as well through hls, and for partial do is. For one search only do /keyword\c
 
-
+LESSON 7
+- 
 
 
 
