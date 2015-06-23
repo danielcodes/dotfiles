@@ -1,0 +1,6 @@
+selectp -t 0 #first pane
+splitw -h -p 50 #split it horizontally
+
+selectp -t 1 #select second pane
+splitw -v -p 50 #split vertically
+selectp -t 0 #back to first pane

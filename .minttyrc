@@ -1,0 +1,4 @@
+BoldAsFont=yes
+Term=xterm-256color
+CursorType=block
+FontHeight=9

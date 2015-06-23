@@ -1,0 +1,10 @@
+More Vim Features
+
+commands for new windows
+:vnew , vertical
+:new , horizontal
+to edit the same file
+:vsplit , vertical
+:split , horizontal
+
+

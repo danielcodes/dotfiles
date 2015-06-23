@@ -1,5 +1,6 @@
 syntax on "for synthax highlighting
 set nocompatible "no idea what this does
+set noswapfile "because they're annoying
 
 set backspace=2 "to delete things in insert mode
 set cursorline cursorcolumn "crosshair
@@ -11,7 +12,9 @@ set softtabstop=4 "tab spaces when editing files
 
 set t_Co=256 "needed for some color schemes
 "adding a colorscheme
-colorscheme badwolf
+set background=dark
+"let g:solarized_termcolors=256
+colorscheme jellybeans 
 
 "Unix as the standard file type
 set ffs=unix,dos,mac
@@ -40,3 +43,12 @@ inoremap jk <esc>
 nnoremap j gj
 nnoremap k gk
 
+"for pathogen plugin
+execute pathogen#infect()
+
+"airline
+let g:airline#extensions#tabline#enable = 1
+set laststatus=2
+
+"emmet, use tab to expand abbr
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
