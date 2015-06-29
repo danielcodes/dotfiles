@@ -1,9 +1,6 @@
 .bash_history
 .bash_profile
 
-.vim/bundle/*
-.vim/autoload/*
-
 .inputrc
 .lesshst
 
