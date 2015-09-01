@@ -197,3 +197,13 @@ alias tmux='tmux -2'
 # }
 # 
 # alias cd=cd_func
+
+#add git prompt
+source ~/bin/git-prompt.sh
+
+PS1='\[\033[1;34m\][\u]\[\033[0m\]:\[\033[0;92m\]\W\[\033[0m\] \[\033[1;93m\]$(__git_ps1 "(%s)")\[\033[0m\]\$ '
+
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+
