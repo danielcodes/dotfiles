@@ -79,11 +79,11 @@ alias tmux='tmux -2'
 # export PROMPT_COMMAND="history -a"
 
 # Aliases
-#
+
 # Some people use a different file for aliases
-# if [ -f "${HOME}/.bash_aliases" ]; then
-#   source "${HOME}/.bash_aliases"
-# fi
+if [ -f "${HOME}/.bash_aliases" ]; then
+  source "${HOME}/.bash_aliases"
+fi
 #
 # Some example alias instructions
 # If these are enabled they will be used instead of any instructions
@@ -203,7 +203,5 @@ source ~/bin/git-prompt.sh
 
 PS1='\[\033[1;34m\][\u]\[\033[0m\]:\[\033[0;92m\]\W\[\033[0m\] \[\033[1;93m\]$(__git_ps1 "(%s)")\[\033[0m\]\$ '
 
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWDIRTYSTATE=1
 
 
