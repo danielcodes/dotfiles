@@ -60,7 +60,12 @@ if [ "$color_prompt" = yes ]; then
 	#this is the original
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 	#don't know what debian does, \username \working directory \git prompt >>(wrapped in white) 
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u]\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\] \[\033[1;93m\]$(__git_ps1 "(%s)")\[\033[0m\] \[\033[01;37m\]>>\[\033[00m\] '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u]\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\] \[\033[1;93m\]$(__git_ps1 "(%s)")\[\033[0m\] \[\033[01;37m\]>>\[\033[00m\] '
+
+	#creating two lines, one for full path and a new line for each command
+	#\username \working directory \git prompt >>(wrapped in white) 
+    PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\w\[\033[00m\] \[\033[1;93m\]$(__git_ps1 "(%s)")\[\033[0m\] \[\033[01;37m\]\n>>\[\033[00m\] '
+
 	#comment this line out if not working with ruby
 	#PS1="\$(~/.rvm/bin/rvm-prompt) $PS1"
 
@@ -133,5 +138,13 @@ source /home/daniel/.local/bin/virtualenvwrapper.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=~/.npm-global/bin:$PATH #for npm globals
+
+#get lost packages
+export PATH=~/.local/bin:$PATH #for npm globals
+
+
+
+
+
 
 

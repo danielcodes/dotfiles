@@ -17,7 +17,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'mattn/emmet-vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,6 +74,8 @@ filetype indent on "specific indent type files
 "for html files
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType arduino setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 set wildmenu "provides auto complete menu, similar to ctrl+d
 set showmatch "hightlight matching brackets
@@ -87,6 +91,13 @@ let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
 "jk is escape
 inoremap jk <esc>
+"faster save and exit with ,s ,w
+noremap <Leader>s :update<CR>
+noremap <Leader>w :q<CR>
+"tabbing
+noremap <Leader>t :tabnew<CR>
+"vertical split
+noremap <Leader>v :vsplit<CR>
 
 "MOVEMENT
 "by visual lines, rather than physical
@@ -97,15 +108,17 @@ nnoremap k gk
 let g:airline#extensions#tabline#enable = 1
 set laststatus=2
 
-"nerdtree
+"nerdtrej
 map <C-n> :NERDTreeToggle<CR>
+noremap <Leader>f :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
 "CtrlP
 "open buffer quickly 
-map <leader>b :CtrlPBuffer
+"map <leader>b :CtrlPBuffer
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/venv/*
 set wildignore+=*.pyc
 set wildignore+=*/node_modules/*
 
@@ -120,6 +133,10 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " Syntastic file checkers config
 let g:syntastic_python_checkers = ['python', 'pyflakes', 'pep8']
-let g:syntastic_javascript_checkers = ['jshint', 'gjslint', 'eslint']
+"let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_javascript_checkers = ['jshint', 'gjslint', 'eslint']
 
+" things to do for dev env
+" learn to run ctags here and all the shortcuts
+" add in tag bar
 
