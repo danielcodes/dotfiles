@@ -4,7 +4,7 @@ alias c="clear"
 alias rmf="rm -rf" #remove folder
 alias v="vim" 
 alias f="firefox"
-alias p="python"
+alias p="python3"
 alias i="ipython"
 alias pt="py.test"
 alias n="node"
@@ -12,17 +12,33 @@ alias j="jobs"
 alias e="exit"
 alias ha="history | ag"
 alias t="tree"
+alias ls="ls -G"
+alias ll="ls -la"
+alias h="http"
+alias ag="ag --ignore /dist"
+alias notes="vim ~/Desktop/notes/notes.txt"
+alias ptpv="cd ~/Desktop/github/planning_view"
+alias hpt="http -a admin@pt.com:admin"
+
+# yarn
+alias ytc="yarn test --coverage"
+
+# docker
+alias d="docker"
+alias dm="docker-machine"
+alias di="docker images"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias doc="docker-compose"
+alias dx="docker exec -it"
+alias dud="docker-compose up -d"
+alias dce="docker-compose exec"
 
 #python
 alias s="source venv/bin/activate"
 alias pv="python3.6 -m venv venv"
 alias pir="pip install -r requirements.txt"
 alias pys="python -m http.server 3000"
-
-#docker
-alias dk="docker"
-alias dkc="docker-compose"
-alias dkm="docker-machine"
 
 #for npm things
 alias np="npm"
@@ -42,19 +58,14 @@ alias gps="gulp serve"
 
 #ie moving into current projects
 alias site="cd ~/Desktop/github/danielcodes.github.io"
-alias til="cd ~/Desktop/github/today-i-learned" 
-alias fcc="cd ~/Desktop/github/fcc-projects"
-alias ken="cd ~/Desktop/github/kendama-collection"
-alias goals="vim ~/Desktop/self-development/goal.txt"
-alias todo="vim ~/Desktop/self-development/todo.txt"
 
 #other utility related
 alias diffc="colordiff" #add color
 alias diffcv="colordiff -y" #put files side to side
 
 #to source bash since I do it so often
-alias sbash="source ~/.bashrc"
-alias vbash="vim ~/.bashrc"
+alias sbash="source ~/.bash_profile"
+alias vbash="vim ~/.bash_profile"
 alias vba="vim ~/.bash_aliases"
 
 #vimrc
@@ -69,6 +80,7 @@ alias gg="git log --graph --oneline --decorate --all"
 alias gd="git diff"
 alias gdh="git diff HEAD~"
 alias gds="git diff --staged"
+alias gdw="git diff --word-diff"
 
 alias gaa="git add -A"
 alias gcm="git commit -m"
@@ -84,22 +96,19 @@ alias gcom="git checkout master"
 alias gs="git stash"
 alias gsp="git stash pop"
 
+alias grp="git remote prune origin"
+alias grpd="git remote prune origin --dry-run"
+
 alias gpoh="git push origin HEAD"
+alias gpohf="git push -f origin HEAD"
 
 alias gm="git merge"
 alias gmt="git mergetool"
 
 alias grh="git reset --hard"
 
-
-#hg
-alias h="hg status"
-alias hl="hg log"
-alias hll='hg log --limit=5'
-alias hllg="hg log --limit=5 -G"
-alias hd="hg diff"
-alias hcm="hg commit -m"
-alias openhgrc="vim .hg/hgrc" 
+alias gbl="git blame"
+alias gsh="git show"
 
 #tmux
 #to detach from a window, do prefix + d
@@ -110,14 +119,6 @@ alias tnew="tmux new -s"
 alias tre="tmux rename-session -t"
 alias ta="tmux attach -t" 
 alias tk="tmux kill-session -t" 
-
-#heroku
-alias hk="heroku"
-alias hkl="heroku local"
-alias hko="heroku open"
-
-#google app engine
-alias gapp="/home/daniel/Downloads/google_appengine/dev_appserver.py"
 
 #django
 alias pmmig="python manage.py migrate"
@@ -156,4 +157,7 @@ alias jsdraft="jekyll serve --drafts"
 alias nls="npm ls --depth=0"
 alias nlsg="npm ls -g --depth=0"
 
+#ctags
+alias ctags="`brew --prefix`/bin/ctags"
+alias jtags="ctags -R . && sed -i '' -E '/^(if|switch|function|module\.exports|it|describe).+language:js$/d' tags"
 

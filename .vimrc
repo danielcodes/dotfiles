@@ -13,28 +13,19 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'sjl/gundo.vim'
-Plugin 'mattn/emmet-vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'w0rp/ale'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 "-----------------------------------------------------------------
 
@@ -72,10 +63,9 @@ set nrformats=hex "counts normally
 filetype indent on "specific indent type files
 
 "for html files
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType arduino setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2 
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 set wildmenu "provides auto complete menu, similar to ctrl+d
 set showmatch "hightlight matching brackets
@@ -99,6 +89,12 @@ noremap <Leader>t :tabnew<CR>
 "vertical split
 noremap <Leader>v :vsplit<CR>
 
+"python pdb
+inoremap PD import pdb; pdb.set_trace();<Esc>
+
+"js console log
+inoremap CL console.log();
+
 "MOVEMENT
 "by visual lines, rather than physical
 nnoremap j gj
@@ -114,13 +110,13 @@ noremap <Leader>f :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
 "CtrlP
-"open buffer quickly 
-"map <leader>b :CtrlPBuffer
+nnoremap <leader>. :CtrlPTag<cr>
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/venv/*
 set wildignore+=*.pyc
 set wildignore+=*/node_modules/*
+set wildignore+=*/coverage/*
 
 "order top to bottom | open file in new buffer | respect directory changes
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -131,12 +127,14 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "Gundo tree
 nnoremap <leader>u :GundoToggle<CR>
 
-" Syntastic file checkers config
-let g:syntastic_python_checkers = ['python', 'pyflakes', 'pep8']
-"let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_javascript_checkers = ['jshint', 'gjslint', 'eslint']
+"Tagbar
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
-" things to do for dev env
-" learn to run ctags here and all the shortcuts
-" add in tag bar
+"ale, uses pyflakes and pylint out of the box
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+
+"jedi
+let g:jedi#popup_on_dot = 0
+inoremap <silent> <buffer> <C-N> <c-x><c-o>
 

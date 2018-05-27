@@ -1,20 +1,10 @@
 [user]
-	email = daniel_1118@hotmail.com
 	name = Daniel Chia
-[color]
-	ui = true	
-[push]
-	default = matching
-[alias]
-	st = status
-	cm = commit -m
+	email = danielarmandochia@gmail.com
+[core]
+	excludesfile = /Users/danielchia/.gitignore
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
-[core]
-	editor = vim
-[format]
-	pretty = oneline
 [mergetool]
 	prompt = false
-	keepBackup = false

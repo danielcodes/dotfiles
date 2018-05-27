@@ -1,9 +1,2 @@
-.bash_history
-.bash_profile
-
-.inputrc
-.lesshst
-
-.viminfo
-
-.profile
+.DS_Store
+tags
