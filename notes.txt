@@ -1,0 +1,15 @@
+
+I've had to set up my config for macbooks way too many times
+time to write down the proccess
+
+My essential files are my vimrc, bash aliases, and bashrc, git config and tmux (5)
+
+start by getting tmux to work
+splitting screens and what not
+
+next get the aliases to work, do this by doing a source on the alias file on bash_profile no rc file
+copy the gitprompt.sh and git-completion.bash file to the home dir
+and then copy over the ps1 propmt
+
+still need to test out git merges and rebasing 
+but this will do for now
