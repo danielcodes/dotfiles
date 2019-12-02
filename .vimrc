@@ -21,7 +21,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'w0rp/ale'
-Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,8 +52,8 @@ set showmode
 syntax on "for synthax highlighting
 set t_Co=256 "needed for some color schemes
 "adding a colorscheme
-set background=dark
-colorscheme jellybeans 
+set background=light
+colorscheme PaperColor
 
 "Unix as the standard file type
 set ffs=unix,dos,mac
@@ -64,7 +63,7 @@ filetype indent on "specific indent type files
 
 "for html files
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2 
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 set wildmenu "provides auto complete menu, similar to ctrl+d
@@ -127,14 +126,12 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "Gundo tree
 nnoremap <leader>u :GundoToggle<CR>
 
+"git blame
+nnoremap <leader>g :Gblame<CR>
+
 "Tagbar
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 "ale, uses pyflakes and pylint out of the box
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
-
-"jedi
-let g:jedi#popup_on_dot = 0
-inoremap <silent> <buffer> <C-N> <c-x><c-o>
-

@@ -11,5 +11,3 @@ next get the aliases to work, do this by doing a source on the alias file on bas
 copy the gitprompt.sh and git-completion.bash file to the home dir
 and then copy over the ps1 propmt
 
-still need to test out git merges and rebasing 
-but this will do for now

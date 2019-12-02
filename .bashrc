@@ -126,25 +126,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-#for virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /home/daniel/.local/bin/virtualenvwrapper.sh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH=~/.npm-global/bin:$PATH #for npm globals
-
-#get lost packages
-export PATH=~/.local/bin:$PATH #for npm globals
-
-
-
-
-
-
-
