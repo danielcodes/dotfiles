@@ -11,3 +11,23 @@ next get the aliases to work, do this by doing a source on the alias file on bas
 copy the gitprompt.sh and git-completion.bash file to the home dir
 and then copy over the ps1 propmt
 
+
+## Setting up for vault
+
+* Changed everything to bash and life is good again
+* Drop `bash_profile`, with needed files
+  * `bash_aliases`
+  * `git-prompt.sh`
+  * `git-completion.bash`
+
+and the `PS1` value for better terminal prompt
+
+* `brew install tmux`
+* Copy `vimrc` and color theme `Papercolor`
+* Install Vundle and do `PluginInstall`
+
+* DONE
+
+* Last but not least some colors in iterm profile
+  * Background white, Foreground black
+  * Uncheck Brighten bold text
